@@ -2,7 +2,7 @@
 
 Cortesdev Redux Portfolio is an example of an isomorphic rendering application in React and Redux. [Live Example Here](http://www.ricardocortes.de/)
 
-<img src="http://www.ricardocortes.de/images/video.gif" width="728" />
+<img src="http://recordit.co/Qrq4Lz6A15" width="728" />
 
 ## Development Installation
 
