@@ -30,7 +30,7 @@
       min-height: 30px;
       margin: 10px 15px; } }
 
- 
+
 .navbar-fixed-bottom, .navbar-fixed-top {
   width: 100%;
   min-height: 60px;
@@ -57,6 +57,47 @@
   margin-bottom: 0;
   list-style: none; }
 
+.nav i {
+  font-size: 20px;
+  margin: 25px 18px;
+}
+
+.navbar-nav-item:hover .la::before {
+  display: none;
+}
+.navbar-nav-item:hover .la::after {
+  font-size: 12px;
+  font-family: 'PT Sans';
+  margin-left:-10px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 7px;
+  -o-transition:color .2s ease-out, background 1s ease-in;
+  -ms-transition:color .2s ease-out, background 1s ease-in;
+  -moz-transition:color .2s ease-out, background 1s ease-in;
+  -webkit-transition:color .2s ease-out, background 1s ease-in;
+   transition:color .2s ease-out, background 1s ease-in;
+}
+
+.navbar-nav-item.home:hover .la-home::after {
+  content: 'Home';
+}
+.navbar-nav-item.portfolio:hover .portfolio::after {
+  content: 'Folio';
+}
+
+.navbar-nav-item.services:hover .services::after {
+  content: 'Services';
+}
+.navbar-nav-item.about:hover .about::after {
+  content: 'About';
+}
+
+
+
+
 @media (min-width: 399px) and (max-width: 543px) {
   .nav {
     padding: 10px 17px; } }
@@ -65,7 +106,9 @@
   .nav-wrapped {
    top: 20px;
     position: absolute;
-     } }
+    width: 60px;
+   }
+}
 
 [class^="fa-"], [class*=" fa-"], .fa {
   display: none;
@@ -110,6 +153,8 @@
         display: block;
         padding-left: 0;
         padding-right: 0;
+        width: 100%;
+        height: 70px;
     }
     .navbar-collapse a {
         color: #ffffff;
@@ -135,10 +180,14 @@
 
 .navbar-nav .nav-item + .nav-item {
   margin-left: 0;
-  width: 100%; }
+  width: 100%;
+  height: 70px;
+ }
   @media (min-width: 768px) {
     .navbar-nav .nav-item + .nav-item {
-      width: auto; } }
+      width: auto;
+      }
+    }
 
 nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
   display: none; }
@@ -303,4 +352,5 @@ section {
 .Navigation-footer {
     position: absolute;
     bottom: 0;
+    font-size: 20px;
 }

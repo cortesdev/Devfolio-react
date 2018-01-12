@@ -39,7 +39,7 @@ class Sidebar extends Component {
 				Visit <a href="https://twitter.com/cortesdev">My Twitter</a><br/>
 		    </p>
 
-		     
+
 
 		  </div>
 

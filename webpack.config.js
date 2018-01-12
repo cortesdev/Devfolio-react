@@ -40,7 +40,7 @@ if (process.env.NODE_ENV === 'production') {
       }),
       new ExtractTextPlugin("app.css"),
       new webpack.optimize.UglifyJsPlugin({minimize: true})
-    ]  
+    ]
   });
 
 }else{
@@ -74,8 +74,11 @@ if (process.env.NODE_ENV === 'production') {
           }
         }
       },
-      { test: /\.(png|jpg|gif|jpeg)$/, loader: 'url-loader?limit=8192'},
+      { test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)(\?\S*)?$/
+        , loader: 'url?limit=100000&name=[name].[ext]'
+      },
       { test: /\.css$/, loader: 'style-loader!css-loader' }
+
     ]},
     entry : [
       'webpack-hot-middleware/client',
@@ -83,9 +86,9 @@ if (process.env.NODE_ENV === 'production') {
     ],
     plugins : [
       new webpack.HotModuleReplacementPlugin()
-    ]  
+    ]
   });
-  
+
 }
 
 module.exports = webpackConfig;
