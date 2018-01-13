@@ -4,12 +4,12 @@
 .navbar-brand {
     padding: 0;
     background: url(assets/logo.png) no-repeat;
-    background-size: 2.5em;
+    background-size: 35px;
     display: block!important;
     position: relative;
-    height: 100px;
-    width: 100px;
-    margin: 1px 13px 20px;
+    height: 34px;
+    width: 39px;
+    margin: 1px 13px 190px;
 }
 
 .logo {
@@ -352,5 +352,13 @@ section {
 .Navigation-footer {
     position: absolute;
     bottom: 0;
-    font-size: 20px;
+    width: 45px;
+    left: 15px;
 }
+.Navigation-footer  p{
+    font-size: 33px;
+  }
+
+  .Navigation-footer  span{
+    font-size: 13px;
+    }

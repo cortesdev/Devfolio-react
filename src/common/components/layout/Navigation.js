@@ -21,7 +21,7 @@ class Navigation extends Component {
             <p>
                 Visit
                 <br/>
-                  <a href="https://github.com/cortesdev"><i className="la la-gitHub"></i></a><br/>
+                  <a href="https://github.com/cortesdev"><i className="la la-github"></i></a><br/>
                   <a href="https://www.linkedin.com/in/cortesdev"><i className="la la-linkedin"></i></a><br/>
                   <a href="https://facebook.com/cortesde"><i className="la la-facebook"></i></a><br/>
 
