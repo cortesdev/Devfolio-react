@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Typist from 'react-typist';
 import Banner from './layout/Banner';
- 
+
   class Home extends Component {
 
   constructor(props){
@@ -19,16 +19,16 @@ import Banner from './layout/Banner';
     return (
 
       	<div className="posts">
- 		   
+
 <Typist>
-     I build scalable, maintainable and secure enterprise web applications. 
+     I build scalable, maintainable and secure enterprise web applications.
 
       <Typist.Delay ms={500} />
       <br />
        for agencies, bluechips, start-ups and sometimes, myself. Find out More
-      </Typist> 
-			 
-  
+      </Typist>
+
+
 		  	<div className="post clearfix">
 
 				<h2>Technologies I build with:</h2>
@@ -41,8 +41,8 @@ import Banner from './layout/Banner';
 
  						<li><em><b>*****</b><b>*</b>CSS</em>
 							<ul>
-								<li><em><b>*</b>SASS</em></li>
-								<li><em><b>*</b>LESS</em></li>
+								<li><em><b>****</b>SASS</em></li>
+								<li><em><b>**</b>LESS</em></li>
 							</ul>
 						</li>
  					</ul>
@@ -64,7 +64,8 @@ import Banner from './layout/Banner';
 					<h4>Testing</h4>
 					<ul>
 						<li><em>Browserstack</em></li>
-						<li><em>Cross Browser</em></li>
+            <li><em>Cross Browser</em></li>
+            <li><em>Cross Device</em></li>
 					</ul>
 				</div>
 
@@ -72,9 +73,9 @@ import Banner from './layout/Banner';
 					<h4>Deployment</h4>
 					<ul className="clearfix">
 						<li><em><b>*</b>Nginx</em></li>
-						<li><em><b>*</b>Webpack</em></li>
-						<li><em>Gulp</em></li>
-						<li><em>Grunt</em></li>
+						<li><em><b>**</b>Webpack</em></li>
+						<li><em>***Gulp</em></li>
+						<li><em>**Grunt</em></li>
 					</ul>
 				</div>
 
@@ -101,7 +102,7 @@ import Banner from './layout/Banner';
 			<Banner />
 
   		</div>
-  
+
     );
   }
 }
