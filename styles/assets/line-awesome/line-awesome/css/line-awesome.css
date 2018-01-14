@@ -842,4 +842,8 @@
 .la-yen:before { content: "\f38a"; }
 .la-youtube:before { content: "\f38b"; }
 .la-youtube-play:before { content: "\f38c"; }
+<<<<<<< HEAD
 .la-youtube-square:before { content: "\f38d"; }
+=======
+.la-youtube-square:before { content: "\f38d"; }
+>>>>>>> 53390b0b957fdd4ace30f15704de71c6bfc8f125
