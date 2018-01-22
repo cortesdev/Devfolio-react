@@ -2,12 +2,16 @@ var path = require('path');
 var webpack = require('webpack');
 var merge = require('merge');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebPackPlugin = require ('html-webpack-plugin');
+
+var dest = path.join(__dirname, 'dist');
+console.log(dest);
 
 var webpackConfig = {
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/static/'
+    filename: 'bundle.js'
+    // publicPath: '/static/'
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
@@ -29,14 +33,27 @@ if (process.env.NODE_ENV === 'production') {
         exclude: /node_modules/,
         include: __dirname
       },
-      { test: /\.(png|jpg|gif|jpeg)$/, loader: 'url-loader?limit=8192'},
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap') }
+      { test: /\.(png|jpg|gif|jpeg)$/, loader: 'url-loader?limit=8192&name=images/[name].[ext]'},
+      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap') },
+      // fonts for IE and android < 4.4
+      { test: /\.(ttf|eot|otf|woff|woff2)(\?.*)?$/,
+        loader:  'file-loader?name=fonts/[name].[ext]'
+
+      },
+      { test: /\.(svg)(\?.*)?$/,
+        loader: 'file-loader?name=fonts/[name].[ext]'
+
+      },
     ]},
     plugins : [
       new webpack.DefinePlugin({
         'process.env': {
           NODE_ENV: JSON.stringify('production')
         }
+      }),
+      new HtmlWebPackPlugin({
+        filename: 'index.html',
+        template: 'template/index.html'
       }),
       new ExtractTextPlugin("app.css"),
       new webpack.optimize.UglifyJsPlugin({minimize: true})
